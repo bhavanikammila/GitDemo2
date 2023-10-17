@@ -33,7 +33,7 @@ public class dsalgo_sd {
 	By TimeComplexity=By.className("list-group-item");	
 	By DrpdownArray=By.xpath("//div[@class='nav-item dropdown show']//div/a[1]");
 	By ArrayGetStrtd=By.xpath("//div[@class='row row-cols-1 row-cols-md-3 g-4']//div[2]//a");
-	//By TextEditorbox=By.xpath("////div[@class='CodeMirror-code']");
+	By TextEditorbox=By.xpath("//form[@id ='answer_form']/div/div/div/textarea");
 	//By TextEditorbox=By.xpath("//div[@class='input']//div[6]/div"); 
 	By RunBtn=By.xpath("//button[text()='Run']");
 	//*********Stack Variables**********//
@@ -123,15 +123,15 @@ public class dsalgo_sd {
 	   driver.findElement(DatastructuresGetStrtd).click();
 	   driver.findElement(TimeComplexity).click();
 	   driver.findElement(Tryhere).click();	
-	   driver.navigate().back();
-	   Thread.sleep(500);
-	   driver.findElement(PracticeQues).click();
-	   Thread.sleep(500);
+	   //driver.navigate().back();
+	   //Thread.sleep(500);
+	   //driver.findElement(PracticeQues).click();
+	   //Thread.sleep(500);
 	   //driver.findElement(Tryhere).click();	   
 	   //driver.navigate().back();
-	   //driver.findElement(TextEditorbox).getAttribute("print 'Hello'"); 
-	   ////////////Thread.sleep(300);
-	   //driver.findElement(RunBtn).click();
+	   driver.findElement(TextEditorbox).sendKeys("print 'Hello'"); 
+	   Thread.sleep(300);
+	   driver.findElement(RunBtn).click();
 	  
 	   //************Stack****************//
 	   driver.navigate().to("https://dsportalapp.herokuapp.com/home");
